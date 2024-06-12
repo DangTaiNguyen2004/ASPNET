@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\mayva\source\repos\dtnBaiKiemTraGK\Models\Model12210900052.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\dtnk22cnt4\lesson07\Models\Model12210900052.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

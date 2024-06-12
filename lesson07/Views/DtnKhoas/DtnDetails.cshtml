@@ -1,0 +1,34 @@
+﻿@model dtnBaiKiemTraGK.Models.DtnKhoa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DtnKhoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnTenMK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnTenMK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnTrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnTrangThai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DtnMaKH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DtnK22CNT4Lesson07DfModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DtnKhoa">
+    <Key>
+      <PropertyRef Name="DtnMaKH" />
+    </Key>
+    <Property Name="DtnMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DtnTenMK" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DtnTrangThai" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="DtnSinhVien" Relationship="DtnK22CNT4Lesson07DfModel.FK_DtnSinhVien_DtnKhoa" FromRole="DtnKhoa" ToRole="DtnSinhVien" />
+  </EntityType>
+  <EntityType Name="DtnSinhVien">
+    <Key>
+      <PropertyRef Name="DtnMaSV" />
+    </Key>
+    <Property Name="DtnMaSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DtnHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DtnTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DtnNgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="DtnPhai" Type="Boolean" />
+    <Property Name="DtnPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DtnEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DtnMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="DtnKhoa" Relationship="DtnK22CNT4Lesson07DfModel.FK_DtnSinhVien_DtnKhoa" FromRole="DtnSinhVien" ToRole="DtnKhoa" />
+  </EntityType>
+  <EntityContainer Name="DtnK22CNT4Lesson07DfEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DtnKhoa" EntityType="Self.DtnKhoa" />
+    <EntitySet Name="DtnSinhVien" EntityType="Self.DtnSinhVien" />
+    <AssociationSet Name="FK_DtnSinhVien_DtnKhoa" Association="DtnK22CNT4Lesson07DfModel.FK_DtnSinhVien_DtnKhoa">
+      <End Role="DtnKhoa" EntitySet="DtnKhoa" />
+      <End Role="DtnSinhVien" EntitySet="DtnSinhVien" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_DtnSinhVien_DtnKhoa">
+    <End Type="DtnK22CNT4Lesson07DfModel.DtnKhoa" Role="DtnKhoa" Multiplicity="0..1" />
+    <End Type="DtnK22CNT4Lesson07DfModel.DtnSinhVien" Role="DtnSinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DtnKhoa">
+        <PropertyRef Name="DtnMaKH" />
+      </Principal>
+      <Dependent Role="DtnSinhVien">
+        <PropertyRef Name="DtnMaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

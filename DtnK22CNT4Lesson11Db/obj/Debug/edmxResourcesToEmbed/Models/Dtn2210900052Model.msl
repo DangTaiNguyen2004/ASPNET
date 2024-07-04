@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DtnK22CNT4Lesson11DbModelStoreContainer" CdmEntityContainer="DtnK22CNT4Lesson11DbEntities">
+    <EntitySetMapping Name="DtnCategory">
+      <EntityTypeMapping TypeName="DtnK22CNT4Lesson11DbModel.DtnCategory">
+        <MappingFragment StoreEntitySet="DtnCategory">
+          <ScalarProperty Name="DtnID" ColumnName="DtnID" />
+          <ScalarProperty Name="DtnCateName" ColumnName="DtnCateName" />
+          <ScalarProperty Name="DtnStatus" ColumnName="DtnStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DtnProduct">
+      <EntityTypeMapping TypeName="DtnK22CNT4Lesson11DbModel.DtnProduct">
+        <MappingFragment StoreEntitySet="DtnProduct">
+          <ScalarProperty Name="Dtnid2210900052" ColumnName="Dtnid2210900052" />
+          <ScalarProperty Name="DtnProName" ColumnName="DtnProName" />
+          <ScalarProperty Name="DtnQty" ColumnName="DtnQty" />
+          <ScalarProperty Name="DtnPrice" ColumnName="DtnPrice" />
+          <ScalarProperty Name="DtnCateId" ColumnName="DtnCateId" />
+          <ScalarProperty Name="DtnActive" ColumnName="DtnActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

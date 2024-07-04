@@ -1,0 +1,35 @@
+﻿@model DtnK22CNT4Lesson11Db.Models.DtnCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Dtn2210900052Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DtnCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnCateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnCateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DtnID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

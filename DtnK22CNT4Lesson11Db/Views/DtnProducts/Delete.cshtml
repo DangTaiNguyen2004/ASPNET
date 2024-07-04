@@ -1,0 +1,65 @@
+﻿@model DtnK22CNT4Lesson11Db.Models.DtnProduct
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Dtn2210900052Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DtnProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnProName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnProName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnCateId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnCateId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnActive)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "DtnIndex")
+        </div>
+    }
+</div>

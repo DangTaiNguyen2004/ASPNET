@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DtnK22CNT4Lesson11DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DtnCategory">
+    <Key>
+      <PropertyRef Name="DtnID" />
+    </Key>
+    <Property Name="DtnID" Type="Int32" Nullable="false" />
+    <Property Name="DtnCateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DtnStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="DtnProduct">
+    <Key>
+      <PropertyRef Name="Dtnid2210900052" />
+    </Key>
+    <Property Name="Dtnid2210900052" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DtnProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DtnQty" Type="Int32" />
+    <Property Name="DtnPrice" Type="Double" />
+    <Property Name="DtnCateId" Type="Int32" />
+    <Property Name="DtnActive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="DtnK22CNT4Lesson11DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DtnCategory" EntityType="Self.DtnCategory" />
+    <EntitySet Name="DtnProduct" EntityType="Self.DtnProduct" />
+  </EntityContainer>
+</Schema>

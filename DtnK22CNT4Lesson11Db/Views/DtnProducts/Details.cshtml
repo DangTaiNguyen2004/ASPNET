@@ -1,0 +1,59 @@
+﻿@model DtnK22CNT4Lesson11Db.Models.DtnProduct
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Dtn2210900052Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DtnProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnProName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnProName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnCateId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnCateId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtnActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtnActive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Dtnid2210900052 }) |
+    @Html.ActionLink("Back to List", "DtnIndex")
+</p>

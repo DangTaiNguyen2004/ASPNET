@@ -1,0 +1,72 @@
+﻿@model IEnumerable<DtnK22CNT4Lesson11Db.Models.DtnProduct>
+
+@{
+    ViewBag.Title = "danh sách sản phẩm";
+    Layout = "~/Views/Shared/_Dtn2210900052Layout.cshtml";
+}
+
+<h2>danh sách sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dtnid2210900052)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtnProName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtnQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtnPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtnCateId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtnActive)
+        </th>
+        <th>chức năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Dtnid2210900052)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DtnProName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DtnQty)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DtnPrice)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DtnCateId)
+    </td>
+    <td>
+        @*@Html.DisplayFor(modelItem => item.DtnActive)*@
+    </td>
+                @if (item.DtnActive == true)
+                {
+                    <span style="color:green">Hoạt động</span>
+                }
+                else
+                {
+                    <span style="color:red">ko Hoạt động</span>
+                }
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Dtnid2210900052 }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Dtnid2210900052 }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Dtnid2210900052 })
+            </td>
+        </tr>
+        }
+
+        </table>

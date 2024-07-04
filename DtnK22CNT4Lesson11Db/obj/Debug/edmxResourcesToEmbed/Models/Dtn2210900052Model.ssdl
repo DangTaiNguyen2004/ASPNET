@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DtnK22CNT4Lesson11DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DtnCategory">
+    <Key>
+      <PropertyRef Name="DtnID" />
+    </Key>
+    <Property Name="DtnID" Type="int" Nullable="false" />
+    <Property Name="DtnCateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DtnStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="DtnProduct">
+    <Key>
+      <PropertyRef Name="Dtnid2210900052" />
+    </Key>
+    <Property Name="Dtnid2210900052" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DtnProName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DtnQty" Type="int" />
+    <Property Name="DtnPrice" Type="float" />
+    <Property Name="DtnCateId" Type="int" />
+    <Property Name="DtnActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="DtnK22CNT4Lesson11DbModelStoreContainer">
+    <EntitySet Name="DtnCategory" EntityType="Self.DtnCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DtnProduct" EntityType="Self.DtnProduct" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

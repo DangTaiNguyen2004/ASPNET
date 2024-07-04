@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DtnK22CNT4Lesson11Db.Models.DtnCategory>
+
+@{
+    ViewBag.Title = "Danh mục sản phẩm";
+    Layout = "~/Views/Shared/_Dtn2210900052Layout.cshtml";
+}
+
+<h2>Danh mục sản phẩm</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<a href="/DtnCategories/Create" class="btn btn-primary my-3">thêm mới</a>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DtnID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtnCateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtnStatus)
+        </th>
+        <th>Chức Năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DtnID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DtnCateName)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.DtnStatus)*@
+
+            @if (item.DtnStatus == true)
+            {
+                <span style="color:green">Hoạt động</span>
+            }
+            else
+            {
+                <span style="color:red">ko Hoạt động</span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DtnID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DtnID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DtnID })
+        </td>
+    </tr>
+}
+
+</table>
